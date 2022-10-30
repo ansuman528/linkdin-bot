@@ -27,7 +27,7 @@ async function makeLike(likeCount,content)
         }
 }
 
-function clickFunction()
+async function clickFunction()
 {
     console.log("i am working");
     const submitButton = document.querySelector("div.comments-comment-box__form-container.flex-grow-1 > form > div:nth-child(2)")
