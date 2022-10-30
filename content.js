@@ -38,9 +38,8 @@ async function clickFunction()
         btn[0].click();
     }
 }
-async function makeComment(commentCount,content)
+async function makeComment(commentCount,content,message)
 {
-    const  message = "Bot testing please ignore";
     if(content)
     {
         for(let i=commentCount-1;i>=0;i--)
@@ -61,13 +60,14 @@ async function myScript()
 {
     const likeCount = await readLocalStorage('likeCount');
     const commentCount = await readLocalStorage('commentCount');
+    const message = await readLocalStorage('message');
     const content = document.querySelectorAll("#main > div:nth-child(3) > div > div.scaffold-finite-scroll__content:first-child > div");
     console.log(content.length)
     console.log(likeCount)
     if(content)
     {
         await makeLike(likeCount,content);
-        makeComment(commentCount,content);
+        makeComment(commentCount,content,message);
     }
 }
 window.addEventListener("load", myScript);

@@ -21,6 +21,11 @@ h1{
   margin-top: 10px;
   margin-left: -30px;
 }
+.message{
+  text-align: center;
+  margin-top: 10px;
+  margin-left: -25px;
+}
 .btn
 {
   border: none;
