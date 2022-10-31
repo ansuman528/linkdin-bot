@@ -14,7 +14,7 @@ function sleep(ms) {
 }
 async function makeLike(likeCount,content)
 {
-        for(let i=0;i<likeCount;i++)
+        for(let i=0;i<likeCount+1;i++)
         {
             const container = content[i].querySelector("div.feed-shared-social-actions.feed-shared-social-action-bar.social-detail-base-social-actions.feed-shared-social-action-bar--full-width.feed-shared-social-action-bar--has-social-counts > span.reactions-react-button.feed-shared-social-action-bar__action-button");
             if(container)
@@ -42,7 +42,7 @@ async function makeComment(commentCount,content,message)
 {
     if(content)
     {
-        for(let i=commentCount-1;i>=0;i--)
+        for(let i=commentCount;i>=0;i--)
         {
             const editBox = content[i].querySelector("div.comments-comment-box__form-container.flex-grow-1 > form > div > div > div.comments-comment-box-comment__text-editor > div > div.editor-container > div > div > div.ql-editor.ql-blank");
             if(editBox)
